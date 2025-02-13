@@ -1,0 +1,13 @@
+как создать репозиторий и загрузить проект:
+echo "# Project_front_1" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/MikhailKuptsov/Project_front_1.git
+git push -u origin main
+
+как загрузить существующий репозиторий в gitHub:
+git remote add origin https://github.com/MikhailKuptsov/Project_front_1.git
+git branch -M main
+git push -u origin main
