@@ -9,8 +9,7 @@ export default function Test_menu(){
         <Row>
             <Col sm={2}>
                 <Nav variant="pills" className="flex-column" >
-                    <h3 >Менеджмент</h3>
-                    <h4 >Уровень 1</h4>
+                    <h3 style={{margin:"15px"}}>Менеджмент</h3>
                     <Nav.Item>
                     <Nav.Link eventKey="first">M1 Достижение ключевых показателей эффективности завода</Nav.Link>
                     </Nav.Item>

@@ -1,21 +1,15 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
-import Person_card from "../Components/Card_person";
-import { Button, Row, Col, Form, FormControl, Dropdown } from "react-bootstrap";
+import { Button, Row, Col, Form, FormControl, Dropdown, Stack} from "react-bootstrap";
+//Общие компоненты
 import Main_Header from "../Components/Main_Header";
 import UnderBar from "../Components/UnderBar";
+//Персональные компоненты
+import Person_card from "../Components/Card_person";
 
-const people=[
-    { fabric_name: 'УЛРЗ', name_person: "Иванов Иван Иванович", link_url:"/Person_information_page"},
-    { fabric_name: 'УЛРЗ', name_person: "Иванов Иван Иванович", link_url:"/Person_information_page"},
-    { fabric_name: 'УЛРЗ', name_person: "Иванов Иван Иванович", link_url:"/Person_information_page"},
-    { fabric_name: 'УЛРЗ', name_person: "Иванов Иван Иванович", link_url:"/Person_information_page"},
-    { fabric_name: 'УЛРЗ', name_person: "Иванов Иван Иванович", link_url:"/Person_information_page"},
-    { fabric_name: 'УЛРЗ', name_person: "Иванов Иван Иванович", link_url:"/Person_information_page"},
-    { fabric_name: 'УЛРЗ', name_person: "Иванов Иван Иванович", link_url:"/Person_information_page"},
-    { fabric_name: 'УЛРЗ', name_person: "Иванов Иван Иванович", link_url:"/Person_information_page"},
-    { fabric_name: 'УЛРЗ', name_person: "Иванов Иван Иванович", link_url:"/Person_information_page"},
-]
+// data files
+import people from "../Text_data/people_list_data";
+
 
 
 export default function Admin_page() {
@@ -25,7 +19,7 @@ export default function Admin_page() {
         return (
             <div>
                 <Main_Header/>
-                <div style={{minHeight:"700px",marginBottom:"30px"}}>
+                <div style={{minHeight:"700px",margin:"20px"}}>
                 <div style={{width:"500px"}}>
                 <Form style={{marginTop:"20px", marginLeft:"20px", marginBottom:"auto", marginRight:"auto"}}>
                     <Row>
@@ -38,6 +32,11 @@ export default function Admin_page() {
                         
                     </Row>
                 </Form>
+                </div>
+                <div style={{margin:'20px'}}>
+                <Button variant="outline-dark" href="/Person_information_page" size="lg">
+                        Создать пользователя
+                    </Button>
                 </div>
                 <div>
                 <Row>{listItems}</Row>

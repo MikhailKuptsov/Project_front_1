@@ -3,22 +3,10 @@ import { Card, Button,Col,Row, Form, Stack} from "react-bootstrap";
 import Main_Header from "../Components/Main_Header";
 import UnderBar from "../Components/UnderBar";
 
-const fabrics = [
-    { title: 'УЛРЗ'},
-    { title: 'ЧЭРЗ'},
-    { title: 'ВТРЗ'},
-    { title: 'УУЛВРЗ'},
-    { title: 'АТРЗ'},
-    { title: 'ЯЭРЗ'},
-    { title: 'ОЛРЗ'},
-    { title: 'РЭРЗ'},
-  ];
+
 
 export default function Person_information_page(){
-    const Cardstyle={width: '400px', marginBottom:"10px", maxHeight:'440px'};
-    const listItems = fabrics.map( fabrics =>
-        <Form.Check type="checkbox" label={fabrics.title} />
-        ); 
+    const Cardstyle={maxWidth: '500px', minWidth:'400px', marginBottom:"10px", };
     return(
         <>
         <Main_Header/>
@@ -48,43 +36,39 @@ export default function Person_information_page(){
                         <Form.Label>Отчество:</Form.Label>
                         <Form.Control type='text' placeholder="Введите отчество" />
                     </Form.Group>
-
+                    <Form.Group className="mb-3" >
+                        <Form.Label>Должность:</Form.Label>
+                        <Form.Control type='text' placeholder="Введите должность" />
+                    </Form.Group>
+                    <Form.Group className="mb-3" >
+                        <Form.Label>Email:</Form.Label>
+                        <Form.Control type='email' placeholder="Введите email" />
+                    </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Пароль</Form.Label>
-                        <Form.Control type="password" placeholder="Пароль" />
+                        <Form.Label>Пароль:</Form.Label>
+                        <Form.Control type="password" placeholder="Введите пароль" />
                     </Form.Group>
                 </Card.Body>
                 </Card>
             </Col>
 
-            <Col>
-            <Card style={Cardstyle}>
-                <Card.Body>
-                <Card.Title>Заводы:</Card.Title>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        {listItems}
-                    </Form.Group>
-                </Card.Body>
-            </Card>
-            </Col>
+            
             
             <Col>
             <Card style={Cardstyle}>
                 <Card.Body>
                 <Card.Title>Разрешения:</Card.Title>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Разрешение на редактирование плановых занчений" />
+                    <Form.Check type="checkbox" label="Админ" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Разрешение на редактирование фактических занчений" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Разрешение на редактирование занчений всех месяцев" />
+                    <Form.Check type="checkbox" label="Обычный пользователь" />
                     </Form.Group>
                     <Button variant="outline-success" type="submit">Сохранить</Button>
                 </Card.Body>
             </Card>
             </Col>
+            <Col></Col>
             </Row>
             </Form>
         </div>

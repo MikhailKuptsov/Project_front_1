@@ -11,9 +11,7 @@ export default function Person_card({info}){
               {/* <Card.Img variant="top" src={image2} /> */}
               <Card.Body>
                 <Card.Title>{info.name}</Card.Title>
-                <Card.Text>
-                  <p size="lg">{info.fabric}</p>
-                </Card.Text>
+                
                 <Button variant="outline-dark" href={info.link}>Редактировать профиль</Button>
               </Card.Body>
             </Card>
