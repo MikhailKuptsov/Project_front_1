@@ -1,5 +1,3 @@
-import React from "react";
-
 const fabrics_tests = [
     { title: 'УЛРЗ', pageLink: "/Data_page", id_item:"1"},
     { title: 'ЧЭРЗ', pageLink: "/Data_page", id_item:"2" },
